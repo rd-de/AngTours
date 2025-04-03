@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { AuthorizationComponent } from "./authorization/authorization.component";
 import { RegistrationComponent } from "./registration/registration.component";
-
+import { TabsModule } from 'primeng/tabs';
 @Component({
   selector: 'app-auth',
-  imports: [AuthorizationComponent, RegistrationComponent],
+  imports: [AuthorizationComponent, RegistrationComponent, TabsModule],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss'
 })

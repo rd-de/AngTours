@@ -1,7 +1,14 @@
-<p>auth works!</p>
-<div>
-    <app-authorization/>
-</div>
-<div>
-    <app-registration></app-registration>
+<div class="flex justify-content-center">
+    <p-tabs value="0">
+        <p-tablist>
+            <p-tab value="0">Auth</p-tab>
+            <p-tab value="1">Register</p-tab>
+        </p-tablist>
+        <p-tabpanel value="0">
+            <app-authorization></app-authorization>
+        </p-tabpanel>
+        <p-tabpanel value="1">
+            <app-registration></app-registration>
+        </p-tabpanel>
+    </p-tabs>
 </div>
