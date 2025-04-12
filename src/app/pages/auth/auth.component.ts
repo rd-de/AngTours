@@ -9,5 +9,10 @@ import { TabsModule } from 'primeng/tabs';
   styleUrl: './auth.component.scss'
 })
 export class AuthComponent {
-
+  ngOnInit(): void{
+    console.log('init')
+  }
+  ngOnDestroy(): void {
+    console.log('destr')
+  }
 }
