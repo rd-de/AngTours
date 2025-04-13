@@ -5,6 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { TabsModule } from 'primeng/tabs';
 import { InputTextModule } from 'primeng/inputtext';
 import { Checkbox } from 'primeng/checkbox';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-registration',
@@ -20,12 +21,14 @@ export class RegistrationComponent implements OnInit {
   email: string;
   isRemember: boolean;
   labelText = 'Save password in storage';
-  constructor() {}
 
-  onAuth(): void {
+  constructor(private userService: UserService) {}
 
+  onAuth(ev: Event): void {
+    console.log('ev', ev);
+    this.userService.addUser({login: this.login, password: this.password})
   }
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 }
